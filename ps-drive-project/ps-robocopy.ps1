@@ -1,5 +1,5 @@
-﻿# Documentation: https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy
-# Handy: http://www.tomsitpro.com/articles/powershell-read-xml-files,2-895.html
+﻿# Roboxopy docs: https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy
+# Powershell <-> XML docs: http://www.tomsitpro.com/articles/powershell-read-xml-files,2-895.html
 
 function main {
     Confirm-Backup
@@ -8,7 +8,7 @@ function main {
 
 # Get user response if they'd like to run a backup
 function Confirm-Backup {
-    $posAnswers = "Yes","Yep","Ya","Yaa","Yaas","Yep","Yup","Yip","Y","Ye","Yars","Yea","Yeah"
+    $posAnswers = "Yes","Yep","Ya","Yaa","Yaas","Yep","Yup","Yip","Y","Ye","Yars","Yea","Yeah","Yaas","Yeh","Yah"
     $negAnswers = "No","Na","Nah","Nop","Nope","Nup","N","Neg"
     $counter = 0
     Do{
@@ -37,8 +37,12 @@ function Confirm-Backup {
 
 function Do-The-Copying($confirmation){
     if($confirmation -eq 'yes'){
-        write-host "Backing up..."
-
+        write-host "Backing up in..." -ForegroundColor Yellow
+        write-host "3..." -ForegroundColor Yellow; Start-Sleep -s 1
+        write-host "2..." -ForegroundColor Yellow; Start-Sleep -s 1
+        write-host "1..." -ForegroundColor Yellow; Start-Sleep -s 1
+        write-host "Go!" -ForegroundColor Yellow
+        
         md -Force D:\Backups
         
         # $env:USERPROFILE
@@ -63,18 +67,20 @@ function Do-The-Copying($confirmation){
                 Stop-Transcript
             }
             Catch {
-            Write-Host "An error occurred:" $PSItem
+            Write-Host "An error occurred:" $PSItem -ForegroundColor Red
             }
         }
+        write-Host ""
         write-Host "Done!"
+        write-Host ""
         Start-Sleep -s 2
     }
+    # Don't want to backup
     else {
-        write-Host "Exiting..."
-        Start-Sleep -s 2
+        Write-Host "Okay, I won't backup." -ForegroundColor Yellow
+        # Do nothing
     }
-    write-host "Exiting..."
-    Start-Sleep -s 2
+    Read-Host "Press any key to exit..."
     exit
 }
 
