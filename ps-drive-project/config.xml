@@ -1,21 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Config>
   <DestinationDirectory>D:\Backups</DestinationDirectory>
-  <Source>
+  <RetentionDays>14</RetentionDays>
+  <Source Name="Documents">
     <SourceDirectory>C:\Users\Ethan\Documents</SourceDirectory>
     <ExcludeDirectories>
-      <Dir>ps-drive-project</Dir>
       <Dir>My Videos</Dir>
       <Dir>My Music</Dir>
       <Dir>My Pictures</Dir>
+      <Dir/>
     </ExcludeDirectories>
     <ExcludeFiles>
       <File>desktop.ini</File>
       <File>always-on-top.exe</File>
+      <File/>
     </ExcludeFiles>
     <DestinationName>Documents</DestinationName>
   </Source>
-  <Source>
+  <Source Name="AppData">
     <SourceDirectory>C:\Users\Ethan\AppData</SourceDirectory>
     <ExcludeDirectories>
       <Dir>Application Data</Dir>
@@ -30,10 +32,10 @@
       <Dir>NVIDIA*</Dir>
       <Dir>Packages</Dir>
       <Dir>uTorrent</Dir>
-      <Dir></Dir>
+      <Dir/>
     </ExcludeDirectories>
     <ExcludeFiles>
-      <File></File>
+      <File/>
     </ExcludeFiles>
     <DestinationName>AppData</DestinationName>
   </Source>
