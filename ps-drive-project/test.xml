@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <SourceDirectories>
+    <Dir>C:\Users\Ethan\Documents\temp</Dir>
+  </SourceDirectories>
+  <ExcludeDirectories>
+    <Dir>folder2</Dir>
+  </ExcludeDirectories>
+  <ExcludeFiles>
+    <File>file3-3.txt</File>
+  </ExcludeFiles>
+  <Destination>D:\Backups\</Destination>
+</config>

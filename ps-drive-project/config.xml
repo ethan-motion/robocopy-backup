@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Config>
+  <DestinationDirectory>D:\Backups</DestinationDirectory>
+  <Source>
+    <SourceDirectory>C:\Users\Ethan\Documents</SourceDirectory>
+    <ExcludeDirectories>
+      <Dir>ps-drive-project</Dir>
+      <Dir>My Videos</Dir>
+      <Dir>My Music</Dir>
+      <Dir>My Pictures</Dir>
+    </ExcludeDirectories>
+    <ExcludeFiles>
+      <File>desktop.ini</File>
+      <File>always-on-top.exe</File>
+    </ExcludeFiles>
+    <DestinationName>Documents</DestinationName>
+  </Source>
+  <Source>
+    <SourceDirectory>C:\Users\Ethan\AppData</SourceDirectory>
+    <ExcludeDirectories>
+      <Dir>Application Data</Dir>
+      <Dir>atom</Dir>
+      <Dir>Temporary Internet Files</Dir>
+      <Dir>Spotify</Dir>
+      <Dir>Temp</Dir>
+      <Dir>Adobe</Dir>
+      <Dir>CEF</Dir>
+      <Dir>CrashDumps</Dir>
+      <Dir>Microsoft*</Dir>
+      <Dir>NVIDIA*</Dir>
+      <Dir>Packages</Dir>
+      <Dir>uTorrent</Dir>
+      <Dir></Dir>
+    </ExcludeDirectories>
+    <ExcludeFiles>
+      <File></File>
+    </ExcludeFiles>
+    <DestinationName>AppData</DestinationName>
+  </Source>
+</Config>
