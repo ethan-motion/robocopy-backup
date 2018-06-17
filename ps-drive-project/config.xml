@@ -30,9 +30,10 @@
       <Dir>CrashDumps</Dir>
       <Dir>Microsoft*</Dir>
       <Dir>NVIDIA*</Dir>
-      <Dir>Packages</Dir>
+      <Dir>Packages*</Dir>
       <Dir>uTorrent</Dir>
-      <Dir/>
+      <Dir>npm*</Dir>
+      <Dir>Python</Dir>
     </ExcludeDirectories>
     <ExcludeFiles>
       <File/>

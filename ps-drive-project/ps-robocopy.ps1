@@ -9,7 +9,7 @@ function main {
 # Get user response if they'd like to run a backup
 function Confirm-Backup {
     $posAnswers = "Yes","Yep","Ya","Yaa","Yaas","Yep","Yup","Yip","Y","Ye","Yars","Yea","Yeah","Yaas","Yeh","Yah"
-    $negAnswers = "No","Na","Nah","Nop","Nope","Nup","N","Neg"
+    $negAnswers = "No","Na","Nah","Nop","Nope","Nup","N","Neg","Newp"
     $counter = 0
     Do{
         Write-host "Would you like to backup your files?" -ForegroundColor Yellow 
@@ -84,10 +84,8 @@ function Do-The-Copying($confirmation){
     exit
 }
 
-
 # Run the main function
 main
-
 
 #XML needs:
 #	Default destination folder
