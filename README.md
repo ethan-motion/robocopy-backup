@@ -1,2 +1,2 @@
 # robocopy-backup
-Powershell script to backup folders and files with a deny-based config.
+This is a PowerShell script that I use to backup my folders and files, using a deny-based config.
