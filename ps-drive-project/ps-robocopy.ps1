@@ -5,43 +5,30 @@ function main {
     Confirm-Backup
 }
 
-
-# Get user response if they'd like to run a backup
 function Confirm-Backup {
     $posAnswers = "Yes","Yep","Ya","Yaa","Yaas","Yep","Yup","Yip","Y","Ye","Yars","Yea","Yeah","Yaas","Yeh","Yah"
     $negAnswers = "No","Na","Nah","Nop","Nope","Nup","N","Neg","Newp"
     $counter = 0
     Do{
-        Write-host "Would you like to backup your files?" -ForegroundColor Yellow 
+        Write-host "Backup files?" -ForegroundColor Yellow 
         $answer = Read-Host 
         if ($answer -in $posAnswers){
-            Do-The-Copying('yes')
+            backup-files('yes')
         }
         elseif ($answer -in $negAnswers){
-            Do-The-Copying('no')
+            backup-files('no')
         }
-        # Too many invalid responses will cause exit
+        # Invalid response will cause exit
         else {
-            $counter++
             #write-host "Counter =" $counter
-            switch ($counter)
-            {
-                1 { Write-Host "Answer yes or no" -ForegroundColor Red }
-                2 { write-Host "Last chance! Yes or no?" -ForegroundColor Red }
-                3 { Write-Host "Fine!"; Do-The-Copying('no') }
-            }
+            Write-Host "Yes or no" -ForegroundColor Red }
         }
     } While ($counter -le 3)
 }
 
-
-function Do-The-Copying($confirmation){
+function backup-files($confirmation){
     if($confirmation -eq 'yes'){
-        write-host "Backing up in..." -ForegroundColor Yellow
-        write-host "3..." -ForegroundColor Yellow; Start-Sleep -s 1
-        write-host "2..." -ForegroundColor Yellow; Start-Sleep -s 1
-        write-host "1..." -ForegroundColor Yellow; Start-Sleep -s 1
-        write-host "Go!" -ForegroundColor Yellow
+        write-host "Backing up..." -ForegroundColor Yellow
         
         md -Force D:\Backups
         
@@ -51,7 +38,6 @@ function Do-The-Copying($confirmation){
         $datedFolder = $xmlConfig.Config.DestinationDirectory + '\' + ((Get-Date).ToString('yyyy-MM-dd'))
 
         New-Item -ItemType Directory -Path $datedFolder
-
 
         foreach ($Source in $sources){
             Try {
@@ -77,7 +63,7 @@ function Do-The-Copying($confirmation){
     }
     # Don't want to backup
     else {
-        Write-Host "Okay, I won't backup." -ForegroundColor Yellow
+        Write-Host "Not backing up" -ForegroundColor Yellow
         # Do nothing
     }
     Read-Host "Press any key to exit..."
