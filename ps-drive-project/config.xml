@@ -1,41 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Config>
-  <DestinationDirectory>D:\Backups</DestinationDirectory>
-  <RetentionDays>14</RetentionDays>
+  <DestinationDirectory>E:\Backups</DestinationDirectory>
   <Source Name="Documents">
-    <SourceDirectory>C:\Users\Ethan\Documents</SourceDirectory>
+    <SourceDirectory>C:\Users\UserName\Documents</SourceDirectory>
     <ExcludeDirectories>
       <Dir>My Videos</Dir>
-      <Dir>My Music</Dir>
-      <Dir>My Pictures</Dir>
       <Dir/>
     </ExcludeDirectories>
     <ExcludeFiles>
       <File>desktop.ini</File>
-      <File>always-on-top.exe</File>
       <File/>
     </ExcludeFiles>
     <DestinationName>Documents</DestinationName>
   </Source>
   <Source Name="AppData">
-    <SourceDirectory>C:\Users\Ethan\AppData</SourceDirectory>
+    <SourceDirectory>C:\Users\UserName\AppData</SourceDirectory>
     <ExcludeDirectories>
       <Dir>Application Data</Dir>
-      <Dir>atom</Dir>
-      <Dir>Temporary Internet Files</Dir>
-      <Dir>Spotify</Dir>
-      <Dir>Temp</Dir>
-      <Dir>Adobe</Dir>
-      <Dir>CEF</Dir>
-      <Dir>CrashDumps</Dir>
-      <Dir>Microsoft*</Dir>
-      <Dir>NVIDIA*</Dir>
-      <Dir>Packages*</Dir>
-      <Dir>uTorrent</Dir>
-      <Dir>npm*</Dir>
-      <Dir>Python</Dir>
+      <Dir/>
     </ExcludeDirectories>
     <ExcludeFiles>
+	 <File>*.TMP</File>
+	 <File>*.tmp</File>
       <File/>
     </ExcludeFiles>
     <DestinationName>AppData</DestinationName>
